@@ -7,7 +7,7 @@ import addUser from "../assets/baseline-group_add-24px.png";
 import leaveIcon from "../assets/leaveIcon.png";
 import { useState } from "react";
 
-const PostHeader = ({ handleFilterButtons, filter }) => {
+const PostHeader = ({ handleFilterButtons, filter , length }) => {
   const headerElement = [
     {
       id: 1,
@@ -32,6 +32,7 @@ const PostHeader = ({ handleFilterButtons, filter }) => {
     {
       id: 5,
       name: "Job",
+      value: "job"
     },
   ];
 
@@ -51,6 +52,7 @@ const PostHeader = ({ handleFilterButtons, filter }) => {
                   className={`h-100 border-end-0 border-top-0 border-start-0 bg-transparent rounded-0 p-2  ${filter === d.value ? "border-3 border-bottom border-black text-black" : "border-bottom-0 text-secondary"}`}
                 >
                    {d.name}
+                   {d.value === "all" && <span className="mx-1">({length})</span>}
                 </button>
                 </li>
             })}
@@ -87,7 +89,7 @@ const PostHeader = ({ handleFilterButtons, filter }) => {
       {/*  Post header responsive  */}
       <div className="container d-flex justify-content-between align-items-center border-bottom border-secondary border-opacity-50 d-md-none d-block">
         <div className="col-md-6 d-flex flex-row justify-content-start align-items-center childPostHidden fs-5 fw-bolder">
-          Posts : ({/* {post.length} */})
+          Posts : ({length}) 
         </div>
         <div className="col-md-6 d-flex justify-content-end align-items-center py-2">
           <div className="d-flex justify-content-center align-items-center bg-light p-2 fw-bolder" >

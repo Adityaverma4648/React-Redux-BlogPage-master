@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
         <div className="col-sm-3 navbarChild d-none d-sm-block d-flex flex-row justify-content-center align-items-center">
           <div
-            className="container bg-light rounded-5 form-group d-flex flex-row justify-content-start align-items-center"
+            className="container bg-light rounded-5 form-group d-lg-flex d-none flex-row justify-content-start align-items-center"
             style={{ height: 42 }}
           >
             <label
@@ -53,7 +53,19 @@ const Navbar = () => {
               <span className="fw-bold text-primary">It's Free!</span>
             </button>
 
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">  
+               <li>
+                <button
+                  type="button"
+                  className="dropdown-item"
+                  onClick={(e)=>{
+                    e.preventDefault();
+                    dispatch(setShowSignUpModal(true))
+                  }}
+                >
+                  SignUp
+                </button>
+              </li>
               <li>
                 <button
                   type="button"
@@ -66,18 +78,7 @@ const Navbar = () => {
                   SignIn
                 </button>
               </li>
-              <li>
-                <button
-                  type="button"
-                  className="dropdown-item"
-                  onClick={(e)=>{
-                    e.preventDefault();
-                    dispatch(setShowSignUpModal(true))
-                  }}
-                >
-                  SignUp
-                </button>
-              </li>
+            
             </ul>
           </div>
         </div>

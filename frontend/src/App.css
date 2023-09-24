@@ -86,7 +86,13 @@ li{
 #postsScroll::-webkit-scrollbar{
    display: none;
 }
-   
+
+
+/* post card */
+
+.cardHalfHeight{
+  min-height : "28vh"
+}
 
 
 /*  media query || responsiveness */
@@ -115,8 +121,8 @@ li{
     height: 65%;
     width: 100vw;
   }
-  .PostCard{
-    height: auto;
+  .cardHalfHeight{
+    min-height : "30vh"
   }
 }
 

@@ -1,5 +1,10 @@
+import { useState } from "react"
+
 /* eslint-disable react/prop-types */
 const GroupCard = (props) => {
+
+  const [followed, setFollowed] = useState(false);
+
   return (
     <div
                   key={props.id}
@@ -18,7 +23,10 @@ const GroupCard = (props) => {
                   <div className="d-flex">
                     <button
                       type="button"
-                      className="btn btn-ouline-secondary bg-light rounded-5 fw-normal"
+                      className={`${followed ? "btn btn-dark text-light" :"btn btn-ouline-secondary bg-light"} rounded-5 fw-normal`}
+                      onClick={()=>{
+                        setFollowed(!followed)
+                      }}
                     >
                       Follow
                     </button>

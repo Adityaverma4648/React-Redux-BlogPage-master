@@ -21,13 +21,12 @@ const PostCard = (props) => {
 
   return (
     <div
-      className="w-100 h-100 mb-3 d-flex flex-column justify-content-start align-items-center bg-white border border-secondary border-opacity-50 bg-danger rounded-2"
-      style={{ minHeight: "50vh" }}
+      className="w-100 mb-3 d-flex flex-column justify-content-start align-items-center bg-white border border-secondary border-opacity-50 bg-danger rounded-2" style={{minHeight : "55vh"}}
     >
-      <div className="w-100 h-50 d-flex justify-content-start align-items-center bg-light overflow-hidden">
-        <img src={props.image} alt="imageLink" style={{ minWidth: "110%" }} />
+      <div className={`w-100 h-50 ${props.image === null ? "d-none" : "d-flex"  } justify-content-start align-items-center bg-light overflow-hidden`}>
+        <img src={props.image} alt="imageLink"  className="w-100 h-100" />
       </div>
-      <div className="container-fluid mt-2 h-50 d-flex flex-column justify-content-between align-items-center p-3">
+      <div className="container-fluid mt-2 h-50 d-flex flex-column justify-content-between align-items-center p-3" >
         <div className="w-100 d-flex flex-column justify-content-start align-items-center">
           <div className="w-100 fw-bolder my-1 px-2 d-flex justify-content-start align-items-center">
             {props.postType === "Article" && (
@@ -138,7 +137,7 @@ const PostCard = (props) => {
               id="avatar"
             >
               <img
-                src="#"
+                src={props.userData.profile}
                 className="bg-danger rounded-5 me-1"
                 style={{ height: "40px", width: "40px" }}
                 alt="userAvatar"

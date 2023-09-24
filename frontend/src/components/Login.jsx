@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import eyeIcon from "../assets/eye.png";
+import closeIcon from "../assets/image 3.png"
 import bgIllustration from "../assets/atg_illustration.png";
 import google from "../assets/search.png";
 import facebook from "../assets/f_logo_RGB-Blue_1024.png";
@@ -38,12 +39,12 @@ const Login = () => {
 
   return (
     <div
-      className="w-100 d-flex justify-content-center justify-content-md-center align-items-center align-items-end-md top-0 position-fixed"
+      className="w-100 d-flex justify-content-center  align-items-end align-items-md-center top-0 position-fixed"
       id="signIn"
       style={{ height: "100vh", zIndex: "10000" }}
     >
       <div
-        className="w-50 d-flex bg-danger position-relative d-flex flex-column justify-content-start align-items-center rounded-3 overflow-hidden"
+        className="col-md-6 col-sm-12  d-flex bg-danger position-relative d-flex flex-column justify-content-start align-items-center rounded-3 overflow-hidden"
         style={{ height: "60vh", zIndex: "10001" }}
       >
         <div
@@ -54,14 +55,19 @@ const Login = () => {
         </div>
 
         <div className="container-fluid d-flex flex-grow-1 justify-content-center align-items-center bg-white">
-          <div className="h-100 w-50 d-flex flex-column justify-content-center align-items-center">
+          <div className="h-100 col-md-6 container-fluid d-flex flex-column justify-content-center align-items-center">
             <form
               method="post"
               action="http://localhost:7000/auth/login"
-              className="bg-white w-75 h-25 d-flex flex-column justify-content-center align-items-center"
+              className="container-fluid h-25 d-flex flex-column justify-content-center align-items-center"
             >
-              <div className="container-fluid d-flex justify-content-start p-2 h4 align-items-center fw-bolder">
+              <div className="container-fluid d-flex justify-content-md-start justify-content-between
+               p-2 h4 align-items-center fw-bolder">
                 Sign In
+
+                <span className="bg-secondary text-white rounded-5 d-flex justify-content-center align-items-center text-white d-md-none"  style={{height : "20px", width : "20px"}} >
+                  <img src={closeIcon} alt="closeIcon" style={{width : "15px"}} />
+                </span>
               </div>
               <div className="container-lg container-fluid d-flex flex-column justify-content-center align-items-center py-1 border-top border-start border-end border-secondary border-opacity-50 bg-light">
                 <input
@@ -100,7 +106,7 @@ const Login = () => {
               />
             </form>
 
-            <div className="bg-white w-75 d-flex flex-column justify-content-center align-items-center mt-5">
+            <div className="container-fluid d-flex flex-column justify-content-center align-items-center mt-5">
               <div className="container-lg container-fluid d-flex flex-column justify-content-center align-items-center py-1 border-top border-start border-end border-secondary border-opacity-50 bg-light">
                 <button
                   type="button"

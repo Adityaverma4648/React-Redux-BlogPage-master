@@ -13,7 +13,6 @@ function App() {
           <Navbar />  
           <Routes>         
             <Route path="/" element={<Home />} exact ></Route>
-          
           </Routes>
         </BrowserRouter>
     </>
