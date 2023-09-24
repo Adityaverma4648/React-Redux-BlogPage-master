@@ -5,11 +5,7 @@
   /* changing default --> imported font */
   font-family: 'IBM Plex Sans', sans-serif;
 }
-body{
-  max-width : 100vw;
-  max-height: 100vh;
-  overflow-y: scroll;
-}
+ 
 /*  default styling removed */
 body::-webkit-scrollbar{
   display: none;
@@ -26,17 +22,38 @@ li{
 }
 /*  default styling block ends here */
 
+
+
+
+/*  fonts size accd to ui  */
+
+.pageHeaderText{
+  font-size : 36px;
+}
+.regulartext{
+  font-size : 18px;
+}
+.postTitleText{
+  font-size : 22px;
+}
+.postDescriptionText{
+  font-size : 19px;
+}
+
+/*  fonts ends here  */
+
+
+
 /*  components */
 .Navbar {
   height: 72px;
   z-index : 9999;
 }
-#logoImage{
-  width : 200px;
-}
+
 .Header{
-  width : 100vw;
+  min-height: 70vh;
 }
+
 #BackgroundImage{
   min-height:55vh;
   width: 100vw;
@@ -44,12 +61,6 @@ li{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-
-.active{
-  border-bottom: 1px solid rgba(0,0,0,1) ;
-  padding: 10px 2rem;
 }
 
 
@@ -72,20 +83,10 @@ li{
    width: 45vw;
 }
 
-.PostCard{
-  height: 50vh;
-
+#postsScroll::-webkit-scrollbar{
+   display: none;
 }
-
-
-/*  POSTCARD */
-/*  removing default caretdown icon */
-
-#dropdownMenuButton1::after{
-   content: none;
-}
-/*  postCard Ends here */
-
+   
 
 
 /*  media query || responsiveness */
@@ -118,3 +119,4 @@ li{
     height: auto;
   }
 }
+

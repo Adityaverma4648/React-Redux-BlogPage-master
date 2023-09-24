@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import {useState} from 'react';
 
@@ -30,7 +31,7 @@ const SignUp = () => {
 
 
   return (
-     <div className='w-100 d-flex justify-content-center align-items-center' style={{height:"100vh"}} >
+     <div className='w-100 d-flex justify-content-center align-items-center bg-danger' style={{height:"100vh"}} >
           <div className='w-sm-50 h-50 p-2' id="signUp" aria-labelledby="signUp" aria-hidden="true">
     <div className="">
       <div className="content">
