@@ -44,7 +44,7 @@ const Login = () => {
       style={{ height: "100vh", zIndex: "10000" }}
     >
       <div
-        className="col-md-6 col-sm-12  d-flex bg-danger position-relative d-flex flex-column justify-content-start align-items-center rounded-3 overflow-hidden"
+        className="col-md-6 col-sm-12  d-flex position-relative d-flex flex-column justify-content-start align-items-center rounded-3 overflow-hidden"
         style={{ height: "60vh", zIndex: "10001" }}
       >
         <div

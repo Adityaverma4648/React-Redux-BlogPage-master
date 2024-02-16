@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     loading : true,
     signInModal : false,
-    signUpModal : false
+    signUpModal : false,
+    createPostModal : false,
 };
 
 const AppSlice = createSlice({
@@ -17,9 +18,13 @@ const AppSlice = createSlice({
      setShowSignUpModal : (state, action)=>{
         state.signUpModal = action.payload
         state.loading = false
-     }
+     },
+     setCreatePostModal : (state, action)=>{
+      state.signInModal = action.payload
+      state.loading = false
+   },
   }
 });
 
-export const { setShowSignInModal , setShowSignUpModal  } = AppSlice.actions;
+export const { setShowSignInModal , setShowSignUpModal , setCreatePostModal  } = AppSlice.actions;
 export default AppSlice.reducer;

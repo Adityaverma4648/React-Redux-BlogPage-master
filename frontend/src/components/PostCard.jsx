@@ -138,7 +138,7 @@ const PostCard = (props) => {
             >
               <img
                 src={props.userData.profile}
-                className="bg-danger rounded-5 me-1"
+                className=" rounded-5 me-1"
                 style={{ height: "40px", width: "40px" }}
                 alt="userAvatar"
               />

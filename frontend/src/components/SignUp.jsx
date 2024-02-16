@@ -75,7 +75,7 @@ const SignUp = () => {
               <div className="container-lg container-fluid d-flex justify-content-center align-items-center py-1 border-top border-start border-end border-secondary border-opacity-50 bg-light">
               <input
                 type="text"
-                className="w-50 bg-transparent mx-1 p-2 border-0"
+                className="w-50 bg-transparent text-black mx-1 p-2 border-0"
                 placeholder="First Name"
                 name="firstname"
                 onChange={(e) => onInputChange(e)}
@@ -83,7 +83,7 @@ const SignUp = () => {
               />
               <input
                 type="text"
-                className="w-50 bg-transparent mx-1 p-2 border-0"
+                className="w-50 bg-transparent text-black mx-1 p-2 border-0"
                 placeholder="Last Name"
                 name="lastname"
                 onChange={(e) => onInputChange(e)}
@@ -93,7 +93,7 @@ const SignUp = () => {
             <div className="container-lg container-fluid d-flex flex-column justify-content-center align-items-center py-1 border-top border-start border-end border-secondary border-opacity-50 bg-light">
               <input
                 type="email"
-                className=" container-fluid bg-transparent p-2 border-0"
+                className=" container-fluid bg-transparent text-black p-2 border-0"
                 placeholder="Enter email"
                 name="userEmail"
                 onChange={(e) => onInputChange(e)}
@@ -103,7 +103,7 @@ const SignUp = () => {
             <div className="container-fluid d-flex justify-content-center align-items-center mb-1 py-1 border border-secondary border-opacity-50 bg-light">
               <input
                 type="password"
-                className="container-md container-fluid p-2 border-0 bg-transparent"
+                className="container-md container-fluid p-2 text-black border-0 bg-transparent"
                 placeholder="Enter password"
                 id="passwordInputLogin"
                 name="password"
